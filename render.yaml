@@ -1,0 +1,9 @@
+# Необязательная конфигурация Render Blueprint (альтернатива ручному Web Service).
+services:
+  - type: web
+    name: paas-heroku-lab
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    autoDeployTrigger: commit
