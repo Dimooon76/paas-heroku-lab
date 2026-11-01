@@ -3,7 +3,7 @@
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-APP_VERSION = "1.0"  # Для повторного деплоя замени на "2.0".
+APP_VERSION = "2.0"
 
 
 @app.get("/")
